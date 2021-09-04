@@ -437,7 +437,7 @@ We will see how an exploratory data analysis can be used to extract information 
 <br /><br />
 <pre class="r"><code>referendum = read.csv(&#39;referendum.csv&#39;)
 library(tidyverse)</code></pre>
-The first 10 rows (of 382) are displayed below:<br />
+The first 10 rows (of 382) are displayed below:<br /><br />
 <pre><code>
 ##      ID       Region        Area                   Remain %        Leave %
 ## 1    1        London        City of London         75.29           24.71
@@ -452,8 +452,34 @@ The first 10 rows (of 382) are displayed below:<br />
 ## 10   10       London        Enfield                55.82           44.18
 </code></pre>
 						
-We can gather some interesting findings simply by sorting the data by a single variable.
-[CODE] [EXAMPLE]. We can see an interest pattern just by looking at the Region variable against the highest remain percentage.
+We can gather some interesting findings simply by sorting the data by a single variable.<br /><br />
+						
+<pre class="r"><code>arrange(referendum, desc(Percent.Remain))</code></pre>
+<pre><code>
+##      ID                   Region                         Area Percent.Remain
+## 1   382               South West                    Gibraltar          95.91
+## 2    22                   London                      Lambeth          78.62
+## 3    12                   London                      Hackney          78.48
+## 4    14                   London                     Haringey          75.57
+## 5     1                   London               City of London          75.29
+## 6    19                   London                    Islington          75.22
+## 7    32                   London                   Wandsworth          75.03
+## 8     7                   London                       Camden          74.94
+## 9   161                 Scotland            City of Edinburgh          74.44
+## 10  160                 Scotland            East Renfrewshire          74.32
+## 11  184                     East                    Cambridge          73.85
+## 12   28                   London                    Southwark          72.81
+## 13  158                 Scotland          East Dunbartonshire          71.40
+## 14  328               South East                       Oxford          70.27
+## 15   13                   London       Hammersmith and Fulham          70.02
+## 16   23                   London                     Lewisham          69.86
+## 17   27                   London         Richmond upon Thames          69.29
+## 18   33                   London                  Westminster          68.97
+## 19   20                   London       Kensington and Chelsea          68.69
+## 20  122               South East            Brighton and Hove          68.62
+</code></pre>						
+
+We can see an interest pattern just by looking at the Region variable against the highest remain percentage.
 <br /><br />
 Another simple task we can do to spot pattern is to filter the data. For example, if we want to look just at the South West region, we can do the following:
 [CODE] [EXAMPLE]
