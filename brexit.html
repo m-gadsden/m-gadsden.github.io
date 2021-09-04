@@ -453,7 +453,12 @@ The first 10 rows (of 382) are displayed below:<br /><br />
 </code></pre>
 						
 We can gather some interesting findings simply by sorting the data by a single variable.<br /><br />
+
+Sort by percentage remain lowest:
+<pre class="r"><code>arrange(referendum, Percent.Remain)</code></pre>
+<pre><code></code></pre>
 						
+Similarly, we can sort the data in the other order:
 <pre class="r"><code>arrange(referendum, desc(Percent.Remain))</code></pre>
 <pre><code>
 ##      ID       Region         Area                   Remain %
