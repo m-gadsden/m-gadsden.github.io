@@ -482,8 +482,49 @@ We can gather some interesting findings simply by sorting the data by a single v
 We can see an interest pattern just by looking at the Region variable against the highest remain percentage.
 <br /><br />
 Another simple task we can do to spot pattern is to filter the data. For example, if we want to look just at the South West region, we can do the following:
+<br />
 <pre class="r"><code>filter(referendum, Region == "South West")</code></pre>
-[EXAMPLE]
+<br />
+<pre><code>
+##     ID     Region                         Area Percent.Remain Percent.Leave
+## 1   96 South West Bath and North East Somerset          57.85         42.15
+## 2   97 South West             Bristol, City of          61.73         38.27
+## 3   98 South West               North Somerset          47.83         52.17
+## 4   99 South West        South Gloucestershire          47.32         52.68
+## 5  100 South West                     Cornwall          43.48         56.52
+## 6  101 South West              Isles of Scilly          56.39         43.61
+## 7  102 South West                     Plymouth          40.06         59.94
+## 8  103 South West                       Torbay          36.84         63.16
+## 9  104 South West                  Bournemouth          45.12         54.88
+## 10 105 South West                        Poole          41.83         58.17
+## 11 106 South West                      Swindon          45.34         54.66
+## 12 107 South West                    Wiltshire          47.51         52.49
+## 13 203 South West                   East Devon          45.89         54.11
+## 14 204 South West                       Exeter          55.28         44.72
+## 15 205 South West                    Mid Devon          46.66         53.34
+## 16 206 South West                  North Devon          42.96         57.04
+## 17 207 South West                   South Hams          52.85         47.15
+## 18 208 South West                  Teignbridge          46.10         53.90
+## 19 209 South West                     Torridge          39.17         60.83
+## 20 210 South West                   West Devon          46.80         53.20
+## 21 211 South West                 Christchurch          41.17         58.83
+## 22 212 South West                  East Dorset          42.38         57.62
+## 23 213 South West                 North Dorset          43.60         56.40
+## 24 214 South West                      Purbeck          40.93         59.07
+## 25 215 South West                  West Dorset          48.97         51.03
+## 26 216 South West        Weymouth and Portland          38.96         61.04
+## 27 234 South West                   Cheltenham          56.17         43.83
+## 28 235 South West                     Cotswold          51.10         48.90
+## 29 236 South West               Forest of Dean          41.42         58.58
+## 30 237 South West                   Gloucester          41.50         58.50
+## 31 238 South West                       Stroud          54.61         45.39
+## 32 239 South West                   Tewkesbury          46.75         53.25
+## 33 332 South West                       Mendip          51.07         48.93
+## 34 333 South West                    Sedgemoor          38.80         61.20
+## 35 334 South West               South Somerset          42.75         57.25
+## 36 335 South West                Taunton Deane          47.08         52.92
+## 37 336 South West                West Somerset          39.41         60.59
+</code></pre>
 <br /><br />										
 R comes with a built in function, the summary function, which gives the min, max, mean and quartiles.
 						
